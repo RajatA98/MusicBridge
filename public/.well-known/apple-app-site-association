@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "PLACEHOLDER_TEAM_ID.com.musicbridge.app",
+        "paths": ["/invite/*", "/practice/*"]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": ["PLACEHOLDER_TEAM_ID.com.musicbridge.app"]
+  },
+  "webcredentials": {
+    "apps": ["PLACEHOLDER_TEAM_ID.com.musicbridge.app"]
+  }
+}

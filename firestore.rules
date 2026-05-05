@@ -1,0 +1,74 @@
+// MusicBridge Firestore Security Rules
+// Locked per DECISIONS.md D2.6.
+// Critical: rules do NOT cascade into subcollections; every nested match must repeat its own checks.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function isTeacher() {
+      return signedIn() && userDoc().data.role == 'teacher';
+    }
+
+    // ─── Users ─────────────────────────────────────────────────────────────
+    // A user can read/write only their own user doc.
+    match /users/{uid} {
+      allow create, read, update: if signedIn() && request.auth.uid == uid;
+    }
+
+    // ─── Assignments ───────────────────────────────────────────────────────
+    // Reads: the assigned student or the assigning teacher.
+    // Writes: only the teacher who owns the assignment.
+    match /assignments/{id} {
+      allow read: if signedIn() && (
+        resource.data.studentId == request.auth.uid ||
+        (isTeacher() && resource.data.teacherId == request.auth.uid)
+      );
+      allow create: if isTeacher() &&
+        request.resource.data.teacherId == request.auth.uid;
+      allow update, delete: if isTeacher() &&
+        resource.data.teacherId == request.auth.uid;
+    }
+
+    // ─── Sessions ──────────────────────────────────────────────────────────
+    // Reads: assigned student or teacher.
+    // Writes: assigned student (mark progress) or teacher (admin/edge case).
+    match /sessions/{id} {
+      allow read: if signedIn() && (
+        resource.data.studentId == request.auth.uid ||
+        (isTeacher() && resource.data.teacherId == request.auth.uid)
+      );
+      allow create, update: if signedIn() && (
+        request.resource.data.studentId == request.auth.uid ||
+        (isTeacher() && request.resource.data.teacherId == request.auth.uid)
+      );
+    }
+
+    // ─── Invites ───────────────────────────────────────────────────────────
+    // Anyone signed in can read (so an invited student can validate the code at signup).
+    // Only the owning teacher can create/update.
+    match /invites/{code} {
+      allow read: if signedIn();
+      allow create, update: if isTeacher() &&
+        request.resource.data.teacherId == request.auth.uid;
+    }
+
+    // ─── Invite Audits (immutable COPPA record) ────────────────────────────
+    // Write-once. Read by the owning teacher only. Update/delete always denied.
+    match /invite_audits/{id} {
+      allow create: if isTeacher() &&
+        request.resource.data.teacherId == request.auth.uid;
+      allow read: if isTeacher() &&
+        resource.data.teacherId == request.auth.uid;
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "_meta": {
+    "note": "WebSearch and WebFetch were denied in this environment; live retrieval was not possible. The content below is compiled from established, widely-cited literature in instrumental music practice research that the assistant has high confidence in. Citations are included so the user can verify each claim. Treat year/effect-size fields as pointers to known studies, not freshly retrieved data.",
+    "retrieval_status": "offline_synthesis"
+  },
+  "researchers": [
+    {
+      "name": "Gary E. McPherson",
+      "affiliation": "University of Melbourne (Melbourne Conservatorium of Music)",
+      "known_for": "Longitudinal studies of young instrumentalists; self-regulation in music practice; 'commitment' as a stronger predictor of achievement than practice time; co-editor of the Oxford Handbook of Music Education.",
+      "camp": "Self-regulation / metacognition camp — argues that HOW students practice (planning, self-monitoring, strategy use) matters more than how much."
+    },
+    {
+      "name": "Susan Hallam",
+      "affiliation": "UCL Institute of Education (Emeritus)",
+      "known_for": "Practice strategies across expertise levels; effective practice taxonomy; large-scale UK studies on practice quality and motivation.",
+      "camp": "Strategy/expertise camp — emphasizes that effective practice strategies are domain-specific and develop with expertise; novices practice qualitatively differently."
+    },
+    {
+      "name": "Robert A. Duke",
+      "affiliation": "University of Texas at Austin (Center for Music Learning)",
+      "known_for": "'It's Not How Much; It's How' study (2009) on advanced pianists; identification of specific behaviors that distinguish effective practice (error handling, slow practice, target-defined repetition).",
+      "camp": "Behavioral / micro-analytic camp — focuses on observable practice behaviors rather than psychological constructs."
+    },
+    {
+      "name": "Andreas C. Lehmann",
+      "affiliation": "Hochschule fuer Musik Wuerzburg",
+      "known_for": "Deliberate practice theory applied to music (with Ericsson); expert performance research; sight-reading expertise.",
+      "camp": "Deliberate practice / Ericsson tradition — accumulated structured practice as the dominant explanation of expertise."
+    },
+    {
+      "name": "K. Anders Ericsson",
+      "affiliation": "Florida State University (deceased 2020)",
+      "known_for": "Deliberate practice framework (1993 Psychological Review paper with Krampe & Tesch-Roemer using Berlin violinists); 10,000-hour concept (popularized by Gladwell, qualified by Ericsson).",
+      "camp": "Deliberate practice originator — practice quantity-and-quality as primary driver."
+    },
+    {
+      "name": "Brooke Macnamara",
+      "affiliation": "Case Western Reserve University",
+      "known_for": "2014 Psychological Science meta-analysis showing deliberate practice explains only ~21% of variance in music performance, ~26% in games, much less in education and professions; major challenger to Ericsson.",
+      "camp": "Anti-deliberate-practice / individual-differences camp — argues talent, starting age, and other factors matter substantially."
+    },
+    {
+      "name": "James Renwick",
+      "affiliation": "Sydney Conservatorium of Music",
+      "known_for": "With McPherson, case studies of motivation and self-regulation in young instrumentalists; the Clarissa case study showing how interest-driven repertoire transformed practice quality.",
+      "camp": "Motivation / SDT-informed camp."
+    },
+    {
+      "name": "Stephanie E. Pitts",
+      "affiliation": "University of Sheffield",
+      "known_for": "Longitudinal studies of musical participation, dropout, and lifelong engagement; qualitative work on why students quit.",
+      "camp": "Sociocultural / lifespan engagement camp."
+    },
+    {
+      "name": "Harald Joergensen",
+      "affiliation": "Norwegian Academy of Music",
+      "known_for": "Conservatoire-level practice research; planning/self-regulation in advanced students; practice time accounting.",
+      "camp": "Self-regulation camp (advanced students)."
+    },
+    {
+      "name": "Barry J. Zimmerman",
+      "affiliation": "CUNY Graduate Center",
+      "known_for": "Three-phase self-regulated learning model (forethought, performance, self-reflection) widely adopted in music practice research.",
+      "camp": "Educational psychology — SRL framework provider."
+    },
+    {
+      "name": "Jane W. Davidson",
+      "affiliation": "University of Melbourne",
+      "known_for": "Role of parents and teachers in young musicians' development; Sloboda & Davidson (1996) on biographical predictors of musical achievement.",
+      "camp": "Social-environmental camp."
+    },
+    {
+      "name": "John Sloboda",
+      "affiliation": "Guildhall School of Music & Drama",
+      "known_for": "Foundational work on musical skill acquisition; biographical studies of high achievers; argued against innate talent narratives."
+    },
+    {
+      "name": "Aaron Williamon",
+      "affiliation": "Royal College of Music",
+      "known_for": "Practice strategies and memorization in advanced pianists; performance science."
+    },
+    {
+      "name": "Peter Miksza",
+      "affiliation": "Indiana University Jacobs School of Music",
+      "known_for": "Self-regulation interventions in instrumental practice; practice behaviors of band students; motivation-achievement links."
+    },
+    {
+      "name": "Siw G. Nielsen",
+      "affiliation": "Norwegian Academy of Music",
+      "known_for": "Self-regulated learning strategies in advanced music students; with Joergensen."
+    },
+    {
+      "name": "Gilles Comeau",
+      "affiliation": "University of Ottawa (Piano Pedagogy Research Lab)",
+      "known_for": "Empirical piano pedagogy; technology in piano learning; motivation and dropout in piano students specifically."
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Deliberate Practice (DP)",
+      "description": "Ericsson, Krampe & Tesch-Roemer (1993): expert performance is the product of accumulated, effortful, goal-directed practice with immediate feedback and repetition aimed at correcting weaknesses — distinct from mere 'play' or 'work'.",
+      "citation": "Ericsson, Krampe, & Tesch-Roemer (1993), Psychological Review, 100(3), 363-406."
+    },
+    {
+      "name": "Self-Regulated Learning (SRL) in music",
+      "description": "Zimmerman's three-phase cyclical model (forethought -> performance/volitional control -> self-reflection) applied to practice. McPherson & Zimmerman (2002, 2011) operationalize six dimensions: motive, method, time, behavior, physical environment, social factors. Failure in any dimension breaks the cycle.",
+      "citation": "McPherson & Zimmerman (2002, 2011) in MENC/Oxford Handbook of Music Education."
+    },
+    {
+      "name": "Hallam's Practice Strategy Taxonomy",
+      "description": "Categorizes practice behaviors by expertise: novices use whole-piece run-throughs and minimal error correction; experts use sectional, slow, varied-tempo, mental-rehearsal, and meta-cognitively monitored strategies.",
+      "citation": "Hallam (2001a, 2001b), Music Education Research; Hallam et al. (2012), Psychology of Music."
+    },
+    {
+      "name": "McPherson's Three-Year Longitudinal Model",
+      "description": "Predictors of musical achievement in beginners followed across three years: pre-learning commitment (how long the child intends to play) is a stronger predictor of achievement than practice quantity itself.",
+      "citation": "McPherson (2005), Psychology of Music, 33(1), 5-35."
+    },
+    {
+      "name": "Self-Determination Theory (SDT) applied to music",
+      "description": "Deci & Ryan's autonomy-competence-relatedness needs framework; controlled (parent-imposed) practice associated with poorer persistence than autonomous practice motivation.",
+      "citation": "Evans (2015) Psychology of Music; Bonneville-Roussy et al. (2013)."
+    },
+    {
+      "name": "Practice-as-Problem-Solving (Duke)",
+      "description": "Effective practice is reconceived as identifying specific errors, isolating them, defining a target, and using slow/sectional repetition until the target is reliably met before increasing tempo. Top-tier students do this; weaker students rerun whole passages without error-targeting.",
+      "citation": "Duke, Simmons & Cash (2009), Journal of Research in Music Education, 56(4), 310-321."
+    }
+  ],
+  "debates": [
+    {
+      "topic": "Does practice quantity or quality dominate?",
+      "conventional_view": "Quantity dominates — Ericsson's deliberate practice and the '10,000 hours' framing imply that accumulated structured hours explain most expertise variance.",
+      "challenger_view": "Macnamara et al. (2014) meta-analysis: deliberate practice explains only ~21% of variance in music; the rest is starting age, working memory, genetics, motivation, and quality of instruction. Hambrick and colleagues argue DP is necessary but far from sufficient.",
+      "challenger_names": ["Brooke Macnamara", "David Hambrick", "Frederick Oswald"]
+    },
+    {
+      "topic": "Is parental involvement helpful or harmful?",
+      "conventional_view": "Davidson, Howe, Moore & Sloboda (1996) and McPherson: parental support — especially structured supervision in early years — predicts achievement and persistence.",
+      "challenger_view": "Creech & Hallam (2003, 2011), Margiotta (2011): controlling/over-involved parents undermine intrinsic motivation; parental pressure correlates with dropout in adolescence. Quality and style of involvement (autonomy-supportive vs controlling) matters more than quantity.",
+      "challenger_names": ["Andrea Creech", "Susan Hallam", "Margaret Margiotta"]
+    },
+    {
+      "topic": "Does practice technology (apps, MIDI feedback, AI listeners) improve home practice?",
+      "conventional_view": "Tech advocates (Comeau lab, SmartMusic/Tonara/Yousician studies sponsored or affiliated): immediate feedback closes the lesson-to-home gap and increases practice time.",
+      "challenger_view": "Independent reviews (Waddell & Williamon 2019; systematic reviews in Frontiers in Psychology and Music Education Research 2021-2023) find effect sizes small, novelty-driven, with poor transfer to expressive/musical outcomes; gamification can crowd out intrinsic motivation and shift attention to gameable metrics (notes hit) rather than musical quality.",
+      "challenger_names": ["George Waddell", "Aaron Williamon"]
+    },
+    {
+      "topic": "What is the primary cause of dropout?",
+      "conventional_view": "Motivational: students lose interest, parents stop pushing, competing activities win out (Pitts; Sloboda).",
+      "challenger_view": "Metacognitive/competence: students drop out because home practice is unproductive, leading to repeated lesson failure, perceived incompetence, and protective disengagement (McPherson; Evans). The 'failure spiral' begins with poor between-lesson practice quality, not with low motivation per se.",
+      "challenger_names": ["Gary McPherson", "Paul Evans"]
+    },
+    {
+      "topic": "Are 'natural talent' and starting age decisive?",
+      "conventional_view": "Sloboda & Howe: differences attributable to practice rather than innate talent.",
+      "challenger_view": "Mosing et al. (2014, twin study, Psychological Science): genetic confounding of practice-ability links — propensity to practice is itself heritable; Ullen, Hambrick: working-memory and starting-age effects are large and not reducible to practice hours.",
+      "challenger_names": ["Miriam Mosing", "Fredrik Ullen", "David Hambrick"]
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Among advanced pianists learning a new etude, the BEST performers were distinguished not by total practice time but by error-handling behaviors: stopping immediately on error, isolating the error, practicing the corrected version slowly, and only then resuming.",
+      "source": "Duke, Simmons & Cash, 'It's Not How Much; It's How,' Journal of Research in Music Education",
+      "year": "2009",
+      "effect_size_or_sample": "N=17 advanced pianists; eight specific behaviors discriminated top vs others; large rank-order effects."
+    },
+    {
+      "claim": "Pre-learning 'commitment' (the child's stated intended duration of playing — months vs years vs forever) predicted three-year achievement more strongly than weekly practice minutes.",
+      "source": "McPherson, 'From child to musician,' Psychology of Music",
+      "year": "2005",
+      "effect_size_or_sample": "N=157 beginning instrumentalists; longitudinal three-year design."
+    },
+    {
+      "claim": "Deliberate practice accounted for ~21% of variance in music performance across studies (vs implied >50% in DP framing).",
+      "source": "Macnamara, Hambrick & Oswald, Psychological Science meta-analysis",
+      "year": "2014",
+      "effect_size_or_sample": "Meta-analysis k=88 studies; music subset r^2 ~ .21."
+    },
+    {
+      "claim": "Novice instrumentalists predominantly use ineffective practice strategies (whole-piece run-throughs, no error correction, no segmentation) regardless of practice time; effective strategies must be explicitly taught and modeled.",
+      "source": "Hallam, 'The development of expertise in young musicians,' Music Education Research; Hallam et al., Psychology of Music",
+      "year": "2001 / 2012",
+      "effect_size_or_sample": "Multiple studies, samples of 50-3000+ UK students."
+    },
+    {
+      "claim": "Self-efficacy and self-regulation predict instrumental achievement above and beyond practice time; metacognitive awareness mediates the practice-achievement relationship.",
+      "source": "McPherson & McCormick, Psychology of Music; Miksza, Journal of Research in Music Education",
+      "year": "2006 / 2012",
+      "effect_size_or_sample": "Beta coefficients .25-.40 for self-regulation indices."
+    },
+    {
+      "claim": "Up to ~50% of children who begin instrumental lessons quit within the first three years; quitting is preceded by declining practice quality, not always declining practice time.",
+      "source": "Hallam (UK studies); Pitts longitudinal; McPherson (Australian)",
+      "year": "2002-2017",
+      "effect_size_or_sample": "Attrition rates 30-60% depending on cohort and country."
+    },
+    {
+      "claim": "Autonomy-supportive (rather than controlling) teacher and parent behaviors predict practice persistence and intrinsic motivation; controlling involvement predicts dropout.",
+      "source": "Evans, McPherson & Davidson, Psychology of Music",
+      "year": "2013, 2015",
+      "effect_size_or_sample": "SDT-framed studies; longitudinal with 157 musicians."
+    },
+    {
+      "claim": "Children's self-reported practice time is systematically inflated by ~25-50% compared to audio-monitored or video-observed practice; self-report studies overstate practice quantity.",
+      "source": "Lehmann & Ericsson; Joergensen practice diaries vs observation studies",
+      "year": "1997-2009",
+      "effect_size_or_sample": "Discrepancies of 25-50% reported across multiple validation studies."
+    },
+    {
+      "claim": "Even at conservatoire level, students spend the majority of practice time on technically unstructured run-throughs rather than on targeted weakness-correction.",
+      "source": "Joergensen, Music Education Research; Williamon & Valentine, British Journal of Psychology",
+      "year": "2002 / 2000",
+      "effect_size_or_sample": "Observational studies of 7-22 advanced pianists."
+    },
+    {
+      "claim": "Specific, short, written practice goals set at the lesson and reviewed the next lesson significantly improve home practice productivity vs generic instructions ('practice this piece').",
+      "source": "Miksza, Journal of Research in Music Education",
+      "year": "2011, 2015",
+      "effect_size_or_sample": "Intervention studies, d ~ .4-.6 on practice quality measures."
+    },
+    {
+      "claim": "Twin studies show practice itself is partly heritable, complicating causal claims that practice causes ability.",
+      "source": "Mosing, Madison, Pedersen, Kuja-Halkola & Ullen, Psychological Science",
+      "year": "2014",
+      "effect_size_or_sample": "N>10,000 Swedish twins; heritability of practice ~40-70%."
+    },
+    {
+      "claim": "Mental practice (silent score study and mental rehearsal) accounts for measurable fraction of expert pianists' preparation and is rarely taught to beginners — a missed lever for home practice quality.",
+      "source": "Lehmann & Ericsson; Bernardi et al., Frontiers in Human Neuroscience",
+      "year": "1997 / 2013",
+      "effect_size_or_sample": "Expert interviews and behavioral studies."
+    }
+  ],
+  "adjacent_domains": [
+    {
+      "domain": "Sports coaching homework / between-session training",
+      "insight": "Athletes given specific, measurable, graded between-session targets (with logged feedback to coach) outperform athletes given general 'work on this' instructions; the 'lesson-to-home' translation problem is solved in elite sport via written training plans, video review, and accountability — most piano lessons import almost none of this infrastructure.",
+      "source": "Cote, Baker & Abernethy review of expert sport development; deliberate practice in sports literature."
+    },
+    {
+      "domain": "Language learning homework",
+      "insight": "Spaced retrieval (Anki, SuperMemo) and interleaving outperform massed repetition; the same effects appear in motor-skill consolidation. Most piano practice is massed (one piece, one section, repeated nose-to-tail) rather than spaced and interleaved, which the cognitive science predicts is suboptimal for retention.",
+      "source": "Karpicke & Roediger; Rohrer & Taylor on interleaving; applied to music by Carter & Grahn (2016) Frontiers in Psychology."
+    },
+    {
+      "domain": "Chess deliberate practice",
+      "insight": "Charness, Tuffiash et al. (2005): in chess, 'serious study alone' (analyzing master games, solving tactics) predicts rating better than tournament play hours — analogous to the music finding that targeted alone-practice (vs ensemble or run-throughs) discriminates expertise. Piano students rarely receive a chess-tactics-puzzle equivalent for home work.",
+      "source": "Charness et al. (2005) Applied Cognitive Psychology."
+    },
+    {
+      "domain": "K-12 academic homework",
+      "insight": "Cooper meta-analyses: homework effect sizes are small for elementary students and grow with age; quality of feedback and parental autonomy-support moderate effects. Mirrors the music finding that young children's home practice is least productive and most parent-dependent.",
+      "source": "Cooper, Robinson & Patall (2006), Review of Educational Research."
+    },
+    {
+      "domain": "Motor learning / physical therapy adherence",
+      "insight": "Home exercise program adherence in PT runs ~30-50%; predictors are perceived self-efficacy, specific written prescriptions, and brief between-session check-ins. The same predictors appear for piano practice adherence, suggesting the problem is not music-specific but a general 'between-session compliance' problem.",
+      "source": "Jack et al. (2010) systematic review of PT adherence; Bassett (2015) on exercise prescription."
+    }
+  ],
+  "misconceptions": [
+    {
+      "common_belief": "More practice time = more progress.",
+      "actual_finding": "Above a low threshold, time correlates weakly with progress; strategy use, error-handling, and self-monitoring dominate. Duke (2009) and McPherson (2005) both show ranking among students is determined by HOW they practice, not duration.",
+      "source": "Duke et al. (2009); McPherson (2005); Hallam (2001)."
+    },
+    {
+      "common_belief": "Children who quit lessons lacked motivation or talent.",
+      "actual_finding": "Quitting is more often a downstream symptom of unproductive home practice that produced repeated lesson failure, eroded self-efficacy, and made disengagement protective. Pre-learning commitment and effective practice strategies are the upstream causes.",
+      "source": "McPherson (2005); Evans, McPherson & Davidson (2013); Pitts (2012)."
+    },
+    {
+      "common_belief": "Parents should sit with the child and supervise practice.",
+      "actual_finding": "Helpful in early years IF the parent is autonomy-supportive (asks questions, encourages problem-solving). Controlling supervision (correcting every error, demanding repetition) predicts dropout and reduces intrinsic motivation.",
+      "source": "Creech & Hallam (2003, 2011); Margiotta (2011); Evans (2015)."
+    },
+    {
+      "common_belief": "Practice apps with real-time feedback solve the home-practice problem.",
+      "actual_finding": "Effects on practice quantity and accuracy are modest and often novelty-driven; effects on musical/expressive outcomes are weak; gamification can shift attention to gameable metrics and crowd out intrinsic motivation. No app yet replicates a teacher's diagnostic feedback on phrasing, voicing, or technique.",
+      "source": "Waddell & Williamon (2019); systematic reviews in Frontiers in Psychology and Music Education Research, 2021-2023."
+    },
+    {
+      "common_belief": "If a student practiced what the teacher assigned, they will improve.",
+      "actual_finding": "Most teacher assignments are under-specified ('practice the Bach') and most student practice defaults to whole-piece run-throughs without error targeting. Without explicit, written, micro-targeted goals, assigned practice frequently produces no measurable improvement between lessons.",
+      "source": "Joergensen (2002); Miksza (2011); Hallam (2001)."
+    },
+    {
+      "common_belief": "Adults can self-direct practice better than children.",
+      "actual_finding": "Adult amateur returners show many of the same novice strategy deficits as children (run-throughs, no segmentation, no error targeting). Self-regulation in music is a learned skill, not an age-dependent one.",
+      "source": "Pitts (lifelong learners studies); Bugos & Cooper on adult learners."
+    },
+    {
+      "common_belief": "Talent is innate and either you have it or you don't.",
+      "actual_finding": "Practice matters substantially but is neither sole nor sufficient cause; recent twin and meta-analytic work (Mosing 2014; Macnamara 2014) shows propensity-to-practice is itself heritable, and starting age, working memory, and instructional quality contribute meaningfully.",
+      "source": "Mosing et al. (2014); Macnamara, Hambrick & Oswald (2014)."
+    }
+  ]
+}

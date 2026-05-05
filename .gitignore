@@ -1,0 +1,53 @@
+# Expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+ios/
+android/
+*.xcworkspace
+*.xcodeproj
+*.tgz
+
+# Node
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Local env
+.env
+.env.*.local
+.env.local
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Firebase emulator
+.firebase/
+*.local
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+emulator-data/
+
+# EAS
+.easignore
+
+# Sentry
+.sentryclirc
+
+# Build outputs
+build/
+*.ipa
+*.apk
+*.aab
