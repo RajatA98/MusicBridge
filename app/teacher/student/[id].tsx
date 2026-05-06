@@ -92,7 +92,8 @@ export default function StudentDetail() {
   const wordsValid = wc >= ASSIGNMENT_MIN_WORDS && wc <= ASSIGNMENT_MAX_WORDS;
 
   return (
-    <View className="flex-1 bg-surface px-6 pt-12">
+    <View className="flex-1 bg-surface">
+      <View className="mx-auto w-full max-w-3xl flex-1 px-6 pt-12">
       <Pressable
         accessibilityRole="button"
         onPress={() => router.replace('/teacher')}
@@ -166,6 +167,7 @@ export default function StudentDetail() {
           )}
         />
       )}
+      </View>
     </View>
   );
 }

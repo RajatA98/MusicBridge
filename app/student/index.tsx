@@ -23,7 +23,8 @@ export default function StudentDashboard() {
   }, [user]);
 
   return (
-    <View className="flex-1 bg-surface px-6 pt-12">
+    <View className="flex-1 bg-surface">
+      <View className="mx-auto w-full max-w-3xl flex-1 px-6 pt-12">
       <View className="mb-8 flex-row items-start justify-between">
         <View>
           <Text className="text-3xl font-bold text-ink">Practice</Text>
@@ -81,6 +82,7 @@ export default function StudentDashboard() {
           )}
         />
       )}
+      </View>
     </View>
   );
 }

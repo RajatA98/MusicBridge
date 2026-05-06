@@ -140,7 +140,7 @@ export default function GuidedSession() {
 
 function Landing({ assignment, onStart }: { assignment: AssignmentDoc; onStart: () => void }) {
   return (
-    <ScrollView className="flex-1 bg-surface" contentContainerClassName="px-6 pt-12 pb-12">
+    <ScrollView className="flex-1 bg-surface" contentContainerClassName="mx-auto w-full max-w-3xl px-6 pt-12 pb-12">
       <Pressable onPress={() => router.replace('/student')} className="mb-3 self-start">
         <Text className="text-sm text-accent">← Back</Text>
       </Pressable>
@@ -202,7 +202,7 @@ function Running({
 
   if (session.fallback) {
     return (
-      <ScrollView className="flex-1 bg-surface" contentContainerClassName="px-6 pt-12 pb-12">
+      <ScrollView className="flex-1 bg-surface" contentContainerClassName="mx-auto w-full max-w-3xl px-6 pt-12 pb-12">
         <Text className="mb-2 text-3xl font-bold text-ink">Today&apos;s practice</Text>
         <View className="my-6 rounded-md border-l-4 border-accent bg-surface-subtle p-4">
           <Text className="text-base leading-relaxed text-ink">{assignmentBody}</Text>
@@ -231,7 +231,7 @@ function Running({
   const dots = new Array(total).fill(0).map((_, i) => i);
 
   return (
-    <ScrollView className="flex-1 bg-surface" contentContainerClassName="px-6 pt-12 pb-12">
+    <ScrollView className="flex-1 bg-surface" contentContainerClassName="mx-auto w-full max-w-3xl px-6 pt-12 pb-12">
       <View className="mb-8 flex-row items-center justify-center gap-2">
         {dots.map((i) => (
           <View

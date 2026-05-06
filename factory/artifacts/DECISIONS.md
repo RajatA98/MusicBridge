@@ -63,10 +63,12 @@ This document locks in product behavior, tech stack, architecture patterns, and 
 ## Part 2 — Tech stack lock-in
 
 ### D2.1 Application platform
-- **Expo SDK 55** (latest stable as of May 2026) + React Native + TypeScript.
+- **Expo SDK** (latest stable) + React Native + TypeScript.
 - **Expo Router** (file-based) for navigation. Same router for native and web.
-- **NativeWind 4.1.23** (pinned — avoid 4.2.0 due to known regressions; 4.1.23 is the SDK 55 / React 19 compatible version).
+- **NativeWind 4.1.23** (pinned — avoid 4.2.0 due to known regressions).
 - Single TypeScript codebase ships **iOS native** + **Web** (via react-native-web) in v1. Android is v2.
+- **iPad is a first-class target.** UI uses centered, width-capped columns (`max-w-md` for forms, `max-w-3xl` for dashboards) so iPad portrait/landscape and desktop browsers don't render phone-sized panels stretched across a huge screen. `app.config.ts` sets `supportsTablet: true`.
+- **v1 testing path:** Web build (Firebase Hosting) + Expo Development Build on iOS Simulator (free; no Apple Developer Program required). TestFlight + production iOS deferred to "production-ready" milestone (owner gates).
 
 ### D2.2 Auth + DB + Backend
 - **Firebase Authentication** (email + password to start). JS SDK v12+.
@@ -212,12 +214,14 @@ service cloud.firestore {
   - If app is not installed → web flow handles signup, invite code persists in Firestore, app reads it on first authenticated launch.
 
 ### D2.12 Distribution (locked)
-- **iOS:** EAS Build production build → EAS Submit → TestFlight.
-  - Internal testing only for v1 50-pilot. No Beta App Review required for internal testers.
-  - Builds expire at 90 days — re-issue if pilot extends.
-- **Web:** Expo web export (`npx expo export -p web`) → Firebase Hosting deploy.
-- **No App Store submission in v1.** Public release is post-validation.
-- **Apple Developer Program:** required for TestFlight. Owner will acquire.
+- **v1 (current):**
+  - **Web** (primary): Expo web export (`npx expo export -p web`) → Firebase Hosting deploy. Public URL.
+  - **iOS Simulator dev build** for development + iPad testing: `eas build --platform ios --profile development --local` produces a `.app` you drag into the simulator. Free, no Apple Developer Program required.
+  - **iOS device dev build** (optional): physical-iPhone install via free Apple ID signing (7-day expiry, re-build to refresh). No Apple Developer Program required.
+- **v2 (production-ready milestone):**
+  - **iOS:** EAS Build production → EAS Submit → TestFlight internal testing for the 50-pilot. Apple Developer Program ($99/year) required at this point.
+  - **App Store submission** stays gated until pilot validation lands.
+- **Web stays the primary distribution channel for v1** because it has no Apple dependency, ships in minutes, and works on any iPad / phone / desktop browser. The native iOS build path exists in the repo (eas.json, app.config.ts, AASA) but is not on the v1 critical path.
 
 ### D2.13 Observability (locked)
 - **Sentry** in the Expo client (native + web) via `@sentry/react-native`.

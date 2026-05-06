@@ -58,7 +58,7 @@ export default function InviteLanding() {
   if (state === 'invalid') {
     return (
       <View className="flex-1 items-center justify-center bg-surface px-6">
-        <View className="w-full max-w-sm">
+        <View className="mx-auto w-full max-w-md">
           <Text className="mb-2 text-3xl font-bold text-ink">Invite not found</Text>
           <Text className="mb-6 text-base text-ink-soft">
             This link may be expired or revoked. Ask your teacher to send you a fresh invite.
@@ -73,7 +73,7 @@ export default function InviteLanding() {
 
   return (
     <View className="flex-1 items-center justify-center bg-surface px-6">
-      <View className="w-full max-w-sm">
+      <View className="mx-auto w-full max-w-md">
         <Text className="mb-2 text-3xl font-bold text-ink">Welcome to MusicBridge</Text>
         <Text className="mb-6 text-base text-ink-soft">
           Your teacher invited you. Sign up to start practicing together.

@@ -39,7 +39,8 @@ export default function GenerateInvite() {
 
   if (result) {
     return (
-      <View className="flex-1 bg-surface px-6 pt-12">
+      <View className="flex-1 bg-surface">
+        <View className="mx-auto w-full max-w-md flex-1 px-6 pt-12">
         <Text className="mb-2 text-3xl font-bold text-ink">Invite ready</Text>
         <Text className="mb-6 text-base text-ink-soft">
           Share this link with your student. They&apos;ll be paired with you when they sign up.
@@ -74,12 +75,14 @@ export default function GenerateInvite() {
         >
           <Text className="text-center text-base text-ink">Back to dashboard</Text>
         </Pressable>
+        </View>
       </View>
     );
   }
 
   return (
-    <View className="flex-1 bg-surface px-6 pt-12">
+    <View className="flex-1 bg-surface">
+      <View className="mx-auto w-full max-w-md flex-1 px-6 pt-12">
       <Text className="mb-2 text-3xl font-bold text-ink">New invite</Text>
       <Text className="mb-6 text-base text-ink-soft">
         Send a unique invite link to one of your students. Each invite is single-use; regenerate
@@ -139,6 +142,7 @@ export default function GenerateInvite() {
       >
         <Text className="text-center text-base text-ink">Cancel</Text>
       </Pressable>
+      </View>
     </View>
   );
 }

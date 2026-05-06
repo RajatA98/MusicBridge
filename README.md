@@ -4,7 +4,8 @@ The delivery layer for piano home practice. A teacher writes what and how a stud
 practice. The student opens the app and runs an AI-guided session that follows the teacher's
 intent, with optional MIDI integration.
 
-iOS native (TestFlight) + Web in v1. Android in v2.
+**v1 distribution:** Web (Firebase Hosting) primary + iOS Simulator / dev build for native testing. iPad is a first-class target.
+**v2:** TestFlight production (gated on Apple Developer Program enrollment). Android v3+.
 
 ## Stack
 
@@ -58,6 +59,22 @@ npm run lint
 npm run test              # unit tests
 npm run test:rules        # Firestore rules emulator tests
 ```
+
+### iOS Simulator dev build (v1 testing path)
+
+For testing on iPad / iPhone simulators with full native module support
+(MIDI, etc.) without an Apple Developer Program membership:
+
+```bash
+npm install -g eas-cli
+eas login
+eas build:configure
+eas build --platform ios --profile development --local   # ~10–15 min
+# Drag the resulting .app into Xcode > Devices and Simulators, or:
+xcrun simctl install booted path/to/MusicBridge.app
+```
+
+Then `npx expo start --dev-client` to connect the dev build to Metro.
 
 ### Deploy
 

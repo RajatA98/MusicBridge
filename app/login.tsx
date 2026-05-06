@@ -31,7 +31,7 @@ export default function Login() {
 
   return (
     <View className="flex-1 items-center justify-center bg-surface px-6">
-      <View className="w-full max-w-sm">
+      <View className="mx-auto w-full max-w-md">
         <Text className="mb-2 text-3xl font-bold text-ink">MusicBridge</Text>
         <Text className="mb-8 text-base text-ink-soft">Sign in to your account.</Text>
 
