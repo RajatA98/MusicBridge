@@ -40,10 +40,12 @@ if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
 }
 
 let app: FirebaseApp;
-if (getApps().length === 0) {
-  app = initializeApp(firebaseConfig as Parameters<typeof initializeApp>[0]);
+const existing = getApps();
+if (existing.length === 0) {
+  app = initializeApp(firebaseConfig);
 } else {
-  app = getApps()[0]!;
+  // existing[0] is guaranteed non-null because length > 0.
+  app = existing[0] as FirebaseApp;
 }
 
 let _auth: Auth;

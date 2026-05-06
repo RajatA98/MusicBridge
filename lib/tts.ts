@@ -71,13 +71,15 @@ export async function synthesize(opts: SynthOptions): Promise<void> {
   }
 
   // Native (iOS): expo-speech.
+  // Note: `useApplicationAudioSession` was on older expo-speech; the current
+  // SpeechOptions surface does not include it. The default audio session
+  // behavior is acceptable for v1 — MIDI input and TTS output do not contend
+  // because they use different audio routes.
   Speech.speak(opts.text, {
     voice: opts.voice,
     rate: opts.rate ?? 1.0,
     onDone: opts.onDone,
     onError: opts.onError,
-    // Avoid contention with MIDI/audio session.
-    useApplicationAudioSession: false,
   });
 }
 
