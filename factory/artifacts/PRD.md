@@ -19,7 +19,7 @@ The app is built as a single **Expo (React Native) universal codebase** that shi
 - **G3.** A guided session walks the student through the teacher's assignment using effective-practice behaviors (segmentation, slow practice, error targeting) — not gamified motivation loops.
 - **G4.** When MIDI is connected, the session reacts to what the student plays. When MIDI is not connected, the session still works.
 - **G5.** Every assignment has a clear "completed" state the student marks themselves; future versions surface this back to the teacher.
-- **G6.** The first ship runs on real users — at least one real teacher and one real student running a real assignment end to end on iOS via TestFlight or on the web build.
+- **G6.** The first ship runs on real users — at least one real teacher and one real student running a real assignment end to end on iOS Simulator dev build (iPhone or iPad) and/or on the web build. TestFlight is v2.
 
 **Success metric** — the BrainLift-defined one: *did the student practice productively this week,* not *did the student log in this week.* For v1 this is approximated by completion + teacher feedback at the next lesson.
 
@@ -134,7 +134,7 @@ The app is built as a single **Expo (React Native) universal codebase** that shi
 - **NFR-P3.** MIDI connection: established within 1 second of user tapping connect.
 
 ### Platform support
-- **NFR-B1.** **iOS native:** iOS 16+ via TestFlight build (App Store submission deferred). MIDI fully supported via Core MIDI.
+- **NFR-B1.** **iOS native (primary v1 target):** iOS 16+. v1 ships via Expo Development Build to iOS Simulator (iPhone + iPad) or via free Apple ID signing on a personal device. TestFlight + App Store submission deferred to v2. MIDI fully supported via Core MIDI on physical devices; simulator forwards Core MIDI from the host Mac.
 - **NFR-B2.** **Web (Expo web export, hosted on Firebase Hosting):**
   - Chrome desktop (latest two versions): full support including MIDI.
   - Edge desktop (latest two versions): full support including MIDI.

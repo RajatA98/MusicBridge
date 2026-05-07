@@ -4,7 +4,7 @@ The delivery layer for piano home practice. A teacher writes what and how a stud
 practice. The student opens the app and runs an AI-guided session that follows the teacher's
 intent, with optional MIDI integration.
 
-**v1 distribution:** Web (Firebase Hosting) primary + iOS Simulator / dev build for native testing. iPad is a first-class target.
+**v1 distribution:** iOS Simulator dev build (iPhone + iPad both first-class) is the primary target. Web (Firebase Hosting) ships alongside for the teacher's laptop workflow.
 **v2:** TestFlight production (gated on Apple Developer Program enrollment). Android v3+.
 
 ## Stack

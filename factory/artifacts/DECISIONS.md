@@ -66,9 +66,10 @@ This document locks in product behavior, tech stack, architecture patterns, and 
 - **Expo SDK** (latest stable) + React Native + TypeScript.
 - **Expo Router** (file-based) for navigation. Same router for native and web.
 - **NativeWind 4.1.23** (pinned — avoid 4.2.0 due to known regressions).
-- Single TypeScript codebase ships **iOS native** + **Web** (via react-native-web) in v1. Android is v2.
-- **iPad is a first-class target.** UI uses centered, width-capped columns (`max-w-md` for forms, `max-w-3xl` for dashboards) so iPad portrait/landscape and desktop browsers don't render phone-sized panels stretched across a huge screen. `app.config.ts` sets `supportsTablet: true`.
-- **v1 testing path:** Web build (Firebase Hosting) + Expo Development Build on iOS Simulator (free; no Apple Developer Program required). TestFlight + production iOS deferred to "production-ready" milestone (owner gates).
+- **Primary v1 target: iOS native — iPhone AND iPad.** Both are first-class. Web is a secondary surface kept alive because (a) the teacher portal is a typing-heavy task best on a laptop, and (b) it lets us iterate without an iOS rebuild.
+- **Single TypeScript codebase** ships iOS native + Web (via react-native-web). Android is v2.
+- **iPad-specific layout:** `app.config.ts` sets `supportsTablet: true`. UI uses centered, width-capped columns (`max-w-md` for forms, `max-w-3xl` for dashboards) so iPad portrait/landscape and desktop browsers don't render phone-sized panels stretched across a huge screen. iPhone remains full-width.
+- **v1 testing path:** Expo Development Build on iOS Simulator (iPhone + iPad simulators) — free, no Apple Developer Program required. Web build deployed to Firebase Hosting alongside, for the teacher's laptop workflow and for fast UI iteration. TestFlight + production iOS distribution deferred to v2 / production-ready milestone.
 
 ### D2.2 Auth + DB + Backend
 - **Firebase Authentication** (email + password to start). JS SDK v12+.
@@ -214,14 +215,19 @@ service cloud.firestore {
   - If app is not installed → web flow handles signup, invite code persists in Firestore, app reads it on first authenticated launch.
 
 ### D2.12 Distribution (locked)
-- **v1 (current):**
-  - **Web** (primary): Expo web export (`npx expo export -p web`) → Firebase Hosting deploy. Public URL.
-  - **iOS Simulator dev build** for development + iPad testing: `eas build --platform ios --profile development --local` produces a `.app` you drag into the simulator. Free, no Apple Developer Program required.
-  - **iOS device dev build** (optional): physical-iPhone install via free Apple ID signing (7-day expiry, re-build to refresh). No Apple Developer Program required.
+- **v1 primary: iOS Simulator dev build** for both iPhone and iPad simulators.
+  - `eas build --platform ios --profile development --local` produces a `.app` to drag into the simulator.
+  - Free, no Apple Developer Program required.
+  - Test the same build on both an iPhone simulator (e.g., iPhone 15) and an iPad simulator (e.g., iPad Pro 11") to verify both layouts in one cycle.
+- **v1 secondary: Web build** via Expo web export (`npx expo export -p web`) → Firebase Hosting deploy.
+  - Used by teachers on laptop/desktop for assignment authoring (typing-heavy task).
+  - Also accessible to anyone who would otherwise need an iOS device but doesn't have one.
+  - Does not gate iOS work — both ship together.
+- **v1 optional: physical iPhone via free Apple ID signing.** 7-day expiry, re-build to refresh. Useful for testing real Core MIDI hardware that the simulator can't fully emulate.
 - **v2 (production-ready milestone):**
   - **iOS:** EAS Build production → EAS Submit → TestFlight internal testing for the 50-pilot. Apple Developer Program ($99/year) required at this point.
-  - **App Store submission** stays gated until pilot validation lands.
-- **Web stays the primary distribution channel for v1** because it has no Apple dependency, ships in minutes, and works on any iPad / phone / desktop browser. The native iOS build path exists in the repo (eas.json, app.config.ts, AASA) but is not on the v1 critical path.
+  - **App Store public submission** stays gated until pilot validation lands.
+- **The native iOS build path is fully wired in the repo** (`app.config.ts`, `eas.json`, AASA + assetlinks files) but the production submit profile uses placeholder Apple Team ID until v2.
 
 ### D2.13 Observability (locked)
 - **Sentry** in the Expo client (native + web) via `@sentry/react-native`.

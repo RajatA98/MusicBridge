@@ -55,7 +55,7 @@ MusicBridge replaces the sticky note with a structured, AI-guided session that f
 
 - **Build target:** 24 hours of agentic coding.
 - **Production target:** real users (teachers and their actual students), not just a demo.
-- **Tech direction:** managed services where possible (auth, database, hosting). No custom auth. No self-hosted database. **iOS native + Web in v1; Android in v2** (pivoted from web-only after Presearch — see `DECISIONS.md` D2.1 for rationale).
+- **Tech direction:** managed services where possible (auth, database, hosting). No custom auth. No self-hosted database. **iOS native (iPhone + iPad) is the v1 primary target; Web ships alongside for the teacher's laptop workflow; Android in v2** (see `DECISIONS.md` D2.1, D2.12 for rationale and distribution detail).
 - **Cost:** free for users in v1. Monetization deferred.
 - **Privacy concerns flagged:** child data (COPPA implications if students are under 13). This is not a launch detail; it is a product constraint. For early testing, access must be restricted to adult students or students confirmed 13+ with teacher-mediated onboarding.
 
